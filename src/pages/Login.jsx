@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 
 function Login() {
+  const navigate = useNavigate();
 
   const [contact, setContact] = useState("");
   const [error, setError] = useState("");
@@ -150,6 +152,7 @@ function Login() {
               <button
                 className="verify-btn"
                 disabled={!isOtpComplete}
+                onClick={() => navigate("/dashboard")}
               >
                 Verify & Continue
               </button>
