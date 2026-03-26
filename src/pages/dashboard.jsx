@@ -1,5 +1,5 @@
 import "../styles/dashboard.css";
-
+import { NavLink } from "react-router-dom";
 function Dashboard() {
   return (
     <div className="dashboard">
@@ -9,11 +9,13 @@ function Dashboard() {
         <h2>⚡ EV Parts</h2>
 
         <ul>
-        <h4>CORE</h4>
+          <h4>CORE</h4>
 
           <li className="active">Dashboard</li>
           <li>Orders</li>
-          <li>Inventory</li>
+          <NavLink to="/inventory" className="sidebar-link">
+  Inventory
+</NavLink>
           <li>Dealers</li>
 
           <h4>COMMERCE</h4>
@@ -23,7 +25,7 @@ function Dashboard() {
           <li>Pricing Rules</li>
 
           <h4>FINANCE</h4>
-          
+
           <li>Settlements</li>
 
           <h4>SYSTEM</h4>
@@ -31,11 +33,11 @@ function Dashboard() {
           <li>Settings</li>
         </ul>
         {/* ROLE SWITCH */}
-<div className="role-switch">
-  <button className="role-btn active">Admin</button>
-  <button className="role-btn">Dealer</button>
-  <button className="role-btn">Finance</button>
-</div>
+        <div className="role-switch">
+          <button className="role-btn active">Admin</button>
+          <button className="role-btn">Dealer</button>
+          <button className="role-btn">Finance</button>
+        </div>
       </div>
 
       {/* MAIN CONTENT */}
@@ -44,16 +46,20 @@ function Dashboard() {
         {/*  TOP BAR */}
         <div className="topbar">
 
-          <input
-            type="text"
-            placeholder="Search parts, dealers, orders..."
-            className="search-bar"
-          />
+          <div className="search-wrapper">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Search parts, dealers, orders..."
+              className="search-bar"
+            />
+          </div>
 
           <div className="topbar-right">
 
             <span className="admin-badge">Admin</span>
-
+            <span className="icon">🔔</span>
+            <span className="icon">⚙️</span>
             <div className="profile">
               <img
                 src="https://i.pravatar.cc/40"
@@ -73,44 +79,161 @@ function Dashboard() {
         {/* CARDS */}
         <div className="cards">
 
-          <div className="card">
-            <p>Gross Merchandise Value</p>
-            <h2>₹2.4Cr</h2>
+          <div className="threeline">
+            <div className="card">
+
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">₹12.4Cr</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
+
+            <div className="card">
+
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">₹2.4Cr</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
+
+            <div className="card">
+
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">₹18.6L</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
+
+
+            <div className="card">
+
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">₹4.2L</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
           </div>
 
-          <div className="card">
-            <p>Net Revenue</p>
-            <h2>₹18.6L</h2>
-          </div>
+          <div className="threeline">
+            <div className="card">
 
-          <div className="card">
-            <p>Platform Commission</p>
-            <h2>₹4.2L</h2>
-          </div>
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
 
-          <div className="card">
-            <p>Active Dealers</p>
-            <h2>847</h2>
-          </div>
+              {/* VALUE */}
+              <h2 className="card-value">847</h2>
 
-          <div className="card">
-            <p>Active Listings</p>
-            <h2>12,458</h2>
-          </div>
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
 
-          <div className="card">
-            <p>Order Conversion</p>
-            <h2>3.8%</h2>
-          </div>
+            </div>
 
-          <div className="card">
-            <p>Low Stock Alerts</p>
-            <h2>156</h2>
-          </div>
+            <div className="card">
 
-          <div className="card">
-            <p>Regional Coverage</p>
-            <h2>28</h2>
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">12,458</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
+
+            <div className="card">
+
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">3.8%</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
+
+            <div className="card">
+
+              {/* TOP */}
+              <div className="card-top">
+                <div className="card-icon">💰</div>
+                <div className="card-arrow">↗</div>
+              </div>
+
+              {/* VALUE */}
+              <h2 className="card-value">156</h2>
+
+              {/* BOTTOM */}
+              <div className="card-bottom">
+                <p className="card-title">changes Gross Merchandise Value</p>
+                <span className="card-sub">Total sales value</span>
+              </div>
+
+            </div>
           </div>
 
         </div>

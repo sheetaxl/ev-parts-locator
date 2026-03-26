@@ -1,0 +1,89 @@
+.inventory-page{
+  padding:20px;
+}
+
+.inventory-page h1{
+  font-size:24px;
+}
+
+.inventory-top{
+  display:flex;
+  gap:10px;
+  margin:20px 0;
+}
+
+.inventory-search{
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.export-btn{
+  padding:8px 12px;
+  border:1px solid #ddd;
+  background:white;
+}
+
+.add-btn{
+  padding:8px 12px;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  border-radius:6px;
+}
+
+/* TABLE */
+
+.table-container{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td{
+  padding:10px;
+  text-align:left;
+  font-size:13px;
+}
+
+thead{
+  background:#f9fafb;
+}
+
+/* TAGS */
+
+.tag{
+  background:#eee;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+
+/* STOCK COLORS */
+
+.green{
+  background:#e6f4ea;
+  color:#2e7d32;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+.orange{
+  background:#fff4e5;
+  color:#d97706;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+.red{
+  background:#fde8e8;
+  color:#dc2626;
+  padding:4px 8px;
+  border-radius:6px;
+}
