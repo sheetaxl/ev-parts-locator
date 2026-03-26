@@ -4,42 +4,6 @@ function Dashboard() {
   return (
     <div className="dashboard">
 
-      {/* SIDEBAR */}
-      <div className="sidebar">
-        <h2>⚡ EV Parts</h2>
-
-        <ul>
-          <h4>CORE</h4>
-
-          <li className="active">Dashboard</li>
-          <li>Orders</li>
-          <NavLink to="/inventory" className="sidebar-link">
-  Inventory
-</NavLink>
-          <li>Dealers</li>
-
-          <h4>COMMERCE</h4>
-
-          <li>Categories</li>
-          <li>Parts</li>
-          <li>Pricing Rules</li>
-
-          <h4>FINANCE</h4>
-
-          <li>Settlements</li>
-
-          <h4>SYSTEM</h4>
-          <li>Users</li>
-          <li>Settings</li>
-        </ul>
-        {/* ROLE SWITCH */}
-        <div className="role-switch">
-          <button className="role-btn active">Admin</button>
-          <button className="role-btn">Dealer</button>
-          <button className="role-btn">Finance</button>
-        </div>
-      </div>
-
       {/* MAIN CONTENT */}
       <div className="main">
 
